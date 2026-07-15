@@ -35,7 +35,7 @@ if (!loginData.confirmPassword) {
     }
   else{
 
-    axios.post(`${baseUrl}/login`, loginData)
+      axios.post(`${baseUrl}/login`, loginData)
   .then((res) => {
     const { message, token, role, email } = res.data;
 
@@ -56,10 +56,6 @@ if (!loginData.confirmPassword) {
       alert("Unable to connect to the server.");
     }
   });
-  }
-    return formError;
-  };
-
   let handleSubmit = (e) => {
     e.preventDefault();
 
