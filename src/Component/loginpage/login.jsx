@@ -35,31 +35,27 @@ if (!loginData.confirmPassword) {
     }
   else{
 
-    axios.post(`${baseUrl}/login`,loginData)
-     .then((res) => {
-          let{success,message,token,role,email} = res.data
+    axios.post(`${baseUrl}/login`, loginData)
+  .then((res) => {
+    const { message, token, role, email } = res.data;
 
-          if(role==="employee"){
-            alert(message)
-            localStorage.setItem("auth_token",token)
-            navigate("/employee",{state:email}); 
+    localStorage.setItem("auth_token", token);
 
-          }
-          else{
-          alert(message)
-            localStorage.setItem("auth_token",token)
-            navigate("/admin"); 
-        }
-          
-        })
-        if (err.response) {
-        const { message } = err.response.data;
-        alert(message);
-        } else {
-          alert("Unable to connect to the server.");
-        }
-    // console.log("Login successful");
-    // navigate("/admin");
+    alert(message);
+
+    if (role === "employee") {
+      navigate("/employee", { state: email });
+    } else {
+      navigate("/admin");
+    }
+  })
+  .catch((err) => {
+    if (err.response) {
+      alert(err.response.data.message);
+    } else {
+      alert("Unable to connect to the server.");
+    }
+  });
   }
     return formError;
   };
