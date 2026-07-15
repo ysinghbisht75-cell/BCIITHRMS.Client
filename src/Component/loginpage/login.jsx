@@ -52,14 +52,12 @@ if (!loginData.confirmPassword) {
         }
           
         })
-        .catch((err) => {
-          console.error("API Error:", err.response?.data || err.message);
-          let  {success,message} = err.response.data;
-          if(success===false){
-            alert(message)
-          }
-         
-        });
+        if (err.response) {
+        const { message } = err.response.data;
+        alert(message);
+        } else {
+          alert("Unable to connect to the server.");
+        }
     // console.log("Login successful");
     // navigate("/admin");
   }
