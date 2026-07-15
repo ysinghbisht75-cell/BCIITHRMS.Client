@@ -1,4 +1,4 @@
-import Login from "./Component/loginpage/login.jsx";
+let Login=lazy(()=>import("./Component/loginpage/login.jsx"))
 let Signup=lazy(()=>import("./Component/signuppage/signuppage.jsx"));
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 let Panel=lazy(()=>import("./Component/admin/panel.jsx"))
@@ -12,7 +12,6 @@ let Reports=lazy(()=>import("./Component/Admin/Pages/Reports.jsx"))
 let Settings=lazy(()=>import("./Component/Admin/Pages/Settings.jsx"))
 let RequireAuth=lazy(()=>import("./Component/RequireAuth.jsx"))
 import {lazy, Suspense } from "react"
-
 
 //Employee Route
 import EmployeePannel from "./Component/Employee_Panel/EmployeePanel.jsx";
