@@ -1,22 +1,22 @@
 let Login=lazy(()=>import("./Component/loginpage/login.jsx"))
 let Signup=lazy(()=>import("./Component/signuppage/signuppage.jsx"));
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-let Panel=lazy(()=>import("./Component/admin/panel.jsx"))
-let Dashboard=lazy(()=>import("./Component/admin/Dashboard.jsx"))
-let Employees=lazy(()=>import("./Component/admin/Pages/Employees.jsx"))
-let Attendance=lazy(()=>import("./Component/admin/Pages/Attendance.jsx"))
-let Payroll=lazy(()=>import("./Component/admin/Pages/Payroll.jsx"))
-let LeaveRequest=lazy(()=>import("./Component/admin/Pages/LeaveRequest.jsx"))
-let Performance=lazy(()=>import("./Component/admin/Pages/Performance.jsx"))
-let Reports=lazy(()=>import("./Component/admin/Pages/Reports.jsx"))
-let Settings=lazy(()=>import("./Component/admin/Pages/Settings.jsx"))
+let Panel=lazy(()=>import("./Component/Admin/panel.jsx"))
+let Dashboard=lazy(()=>import("./Component/Admin/Dashboard.jsx"))
+let Employees=lazy(()=>import("./Component/Admin/Pages/Employees.jsx"))
+let Attendance=lazy(()=>import("./Component/Admin/Pages/Attendance.jsx"))
+let Payroll=lazy(()=>import("./Component/Admin/Pages/Payroll.jsx"))
+let LeaveRequest=lazy(()=>import("./Component/Admin/Pages/LeaveRequest.jsx"))
+let Performance=lazy(()=>import("./Component/Admin/Pages/Performance.jsx"))
+let Reports=lazy(()=>import("./Component/Admin/Pages/Reports.jsx"))
+let Settings=lazy(()=>import("./Component/Admin/Pages/Settings.jsx"))
 let RequireAuth=lazy(()=>import("./Component/RequireAuth.jsx"))
 import {lazy, Suspense } from "react"
 
 //Employee Route
 import EmployeePannel from "./Component/Employee_Panel/EmployeePanel.jsx";
 import EmployeeDashboard from "./Component/Employee_Panel/Pages/EmployeeDashboard.jsx";
-import EmployeeAttenadnce from "./Component/admin/Pages/Attendance.jsx";
+import EmployeeAttenadnce from "./Component/Admin/Pages/Attendance.jsx";
 import EmployeeProfile from "./Component/Employee_Panel/Pages/EmployeeProfile.jsx";
 import EmployeeRequests from "./Component/Employee_Panel/Pages/EmployeeRequests.jsx";
 import EmployeePaySlips from "./Component/Employee_Panel/Pages/EmployeePaySlips.jsx";
