@@ -35,7 +35,7 @@ if (!loginData.confirmPassword) {
     }
   else{
 
-    axios.post(`${baseUrl}login`,loginData)
+    axios.post(`${baseUrl}/login`,loginData)
      .then((res) => {
           let{success,message,token,role,email} = res.data
 
