@@ -6,6 +6,7 @@ import axios from "axios";
 let baseUrl = import.meta.env.VITE_BASE_URL;
 
 export default function Login() {
+  console.log("Login component rendered");
   let navigate = useNavigate();
   let [loginData, setLoginData] = useState({
     email: "",
@@ -34,7 +35,7 @@ if (!loginData.confirmPassword) {
     }
   else{
 
-    axios.post(`${baseUrl}/login`,loginData)
+    axios.post(`${baseUrl}login`,loginData)
      .then((res) => {
           let{success,message,token,role,email} = res.data
 
